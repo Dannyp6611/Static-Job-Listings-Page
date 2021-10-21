@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
+
+:root {
+  --Desaturated-Dark-Cyan: hsl(180, 29%, 50%);
+
+  --Light-Grayish-Cyan-bg: hsl(180, 52%, 96%);
+  --Light-Grayish-Cyan-filter: hsl(180, 31%, 95%);
+  --Dark-Grayish-Cyan: hsl(180, 8%, 52%);
+  --Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 1.5rem;
+  background-color: var(--Light-Grayish-Cyan-bg);
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  width: 100vw;
+  height: 200px;
+  background-color: var(--Desaturated-Dark-Cyan);
+  background-image: url("../assets/images/bg-header-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media only screen and (min-width: 700px) {
+  body::before {
+    background-image: url("../assets/images/bg-header-desktop.svg");
+  }
+}
+
+.card {
+  background: white;
+  margin: 70px auto;
+  border-radius: 4px;
+  border-left: 6px solid transparent;
+  padding: 2rem;
+  box-shadow: 0 6px 12px rgba(44, 58, 58, 0.1);
+}
+
+@media only screen and (min-width: 700px) {
+  .card {
+    margin: 30px auto;
+  }
+}
